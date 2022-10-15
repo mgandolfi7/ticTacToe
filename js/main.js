@@ -19,19 +19,19 @@ document.querySelector("#cell6").addEventListener("click", cell6Move);
 document.querySelector("#cell7").addEventListener("click", cell7Move);
 document.querySelector("#cell8").addEventListener("click", cell8Move);
 
-
-
 function cell0Move() {
     if (waitingOn0 === false) {
         cell0 = document.querySelector("#cell0").innerText = "X"
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell0 = document.querySelector("#cell0").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
@@ -41,11 +41,13 @@ function cell1Move() {
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell1 = document.querySelector("#cell1").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
@@ -55,11 +57,13 @@ function cell2Move() {
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell2 = document.querySelector("#cell2").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
@@ -69,11 +73,13 @@ function cell3Move() {
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell3 = document.querySelector("#cell3").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
@@ -83,11 +89,13 @@ function cell4Move() {
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell4 = document.querySelector("#cell4").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
@@ -97,11 +105,13 @@ function cell5Move() {
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell5 = document.querySelector("#cell5").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
@@ -111,11 +121,13 @@ function cell6Move() {
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell6 = document.querySelector("#cell6").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
@@ -125,11 +137,13 @@ function cell7Move() {
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell7 = document.querySelector("#cell7").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
@@ -139,22 +153,30 @@ function cell8Move() {
         waitingOn0 = true;
         checkXWin()
         checkOWin()
+        checkTie()
     } else {
         cell8 = document.querySelector("#cell8").innerText = "O"
         waitingOn0 = false;
         checkXWin()
         checkOWin()
+        checkTie()
     }
 }
 
 function checkXWin() {
     if (cell0 === "X" && cell1 === "X" && cell2 === "X" || cell3 === "X" && cell4 === "X" && cell5 === "X" || cell6 === "X" && cell7 === "X" && cell8 === "X" || cell0 === "X" && cell3 === "X" && cell6 === "X" || cell1 === "X" && cell4 === "X" && cell7 === "X" || cell2 === "X" && cell5 === "X" && cell8 === "X" || cell0 === "X" && cell4 === "X" && cell8 === "X") {
         alert("X WINS!")
-} 
+}
 }
 
 function checkOWin() {
     if (cell0 === "O" && cell1 === "O" && cell2 === "O" || cell3 === "O" && cell4 === "O" && cell5 === "O" || cell6 === "O" && cell7 === "O" && cell8 === "O" || cell0 === "O" && cell3 === "O" && cell6 === "O" || cell1 === "O" && cell4 === "O" && cell7 === "O" || cell2 === "O" && cell5 === "O" && cell8 === "O" || cell0 === "O" && cell4 === "O" && cell8 === "O") {
         alert("O WINS!")
 } 
+}
+
+function checkTie() {
+    if (cell0 !== "" && cell1 !== "" && cell2 !== "" && cell3 !== "" && cell4 !== "" && cell5 !== "" && cell6 !== "" && cell7 !== "" && cell8 !== "") {
+        alert("TIED GAME!")
+    }
 }
