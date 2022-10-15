@@ -18,6 +18,8 @@ document.querySelector("#cell5").addEventListener("click", cell5Move);
 document.querySelector("#cell6").addEventListener("click", cell6Move);
 document.querySelector("#cell7").addEventListener("click", cell7Move);
 document.querySelector("#cell8").addEventListener("click", cell8Move);
+document.querySelector("button").addEventListener("click", restart);
+
 
 function cell0Move() {
     if (waitingOn0 === false) {
@@ -179,4 +181,8 @@ function checkTie() {
     if (cell0 !== "" && cell1 !== "" && cell2 !== "" && cell3 !== "" && cell4 !== "" && cell5 !== "" && cell6 !== "" && cell7 !== "" && cell8 !== "") {
         alert("TIED GAME!")
     }
+}
+
+function restart() {
+    location.reload()
 }
